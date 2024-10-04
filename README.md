@@ -2,7 +2,7 @@
   <head>
     IT Sales Application
   </head>
-  <div>
+  <div align=left>
      <p>
     The product's concept and design lies in one simple idea - Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?
   </p>
