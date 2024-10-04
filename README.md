@@ -1,6 +1,9 @@
 <html>
   <head>
-    IT Sales Application
+    <h1>
+      IT Sales Application
+    </h1>
+    <br/>
   </head>
   <div align=left>
      <p>
