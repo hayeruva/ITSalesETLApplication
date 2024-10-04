@@ -5,13 +5,30 @@
     </h1>
     <br/>
   </head>
+  <body>
+    
   <div align=left>
      <p>
-    The product's concept and design lies in one simple idea - Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?
+    A product's development lifecycle involves <br/>
+       <ul>
+         <li>
+           Ideation - a rough sketch
+         </li>
+         <li>
+           Gathering marketable requirements
+         </li>
+         <li>
+           Fine tuning the services and views
+         </li>
+         <li>
+           Marketing via Demos and Advertisements
+         </li>
+       </ul> <br/>
+       IT Sales Application - This product's concept and design lies in one simple idea - ```Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?```
   </p>
+    
   <span>
     <h3> PRODUCT FEATURE LOG </h3>
-    <br/>
     <ol>
       <li>
         Employees can register on the website
@@ -31,5 +48,5 @@
     </ol>
   </span>
   </div>
- 
+  </body>
 </html>
