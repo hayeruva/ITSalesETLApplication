@@ -27,7 +27,7 @@
   </p>
     <p>
        <h4>Concept and Design</h4>
-          Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?
+          An Intuitive tool to match the Applicant's profile and requirements with those of Recruiters.
   </p>
     
   <span>
