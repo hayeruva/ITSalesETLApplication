@@ -1,0 +1,67 @@
+Personal Learning - Technical Skills & Work Style Simulation
+
+Cockroach DB (Distributed DB - has node and clients)
+1. Local Installation
+2. SQL queries
+3. Understanding the Distributed DB architecture -  Clustering is primarily focussed on the principle of “Availability”. Same dataset is rendered through multiple nodes (server:port). There are also different schemes that allow for independent storage at each node, vs. shared storage. However, these require the application to have enough intelligence to know that it is clustered, and keep the two storage sets in sync.
+4. Production grade set up
+
+ETL application - bringing the ETL logic to Java Level
+1. Use Cockroach DB - Extract
+2. Group, Aggregate - Transform
+3. Save it to another table - Load
+
+R&D
+1. Use Red Black trees and Circular Linked List
+2. Real time spatial data/geo location (latitude-longitude for employees/recruiters)
+
+DB Design - IT Sales
+1. Table - employees
+    1. Name
+    2. Designation
+    3. company
+    4. Location (cockroach db spatial data - data type)
+    5. Preferred miles for relocation (remote - 0, hybrid - 100, on-site - 500)
+    6. Availability (Employees looking for immediate job, Employees looking for second job etc.) (immediate (looking for anything immediate), open-to-work (looking for change), promotion (looking for promotion), current (has a job))
+    7. Email
+    8. Phone
+2. Table - recruiters
+    1. Name
+    2. Company
+    3. Region (only two - National recruiter (can be matched with all employees), Regional (need to calculate match score based on employee’s spatial data and recruiters spatial data - data type))
+    4. Sector/Line of Business
+    5. Technology
+    6. Requirement type (Remote, On-site, Hybrid)
+    7. Position type (immediate, long-term, short-term)
+    8. Email
+    9. Phone
+3. Table - skills (Skills that employees have, Skills that recruiters are looking for)
+    1. Primary Skill (Skill name)
+    2. Employee (Skill that employee has)
+    3. Recruiter (Skill that recruiter wants)
+
+
+1. Load table - (after E & T) (JIRA epic and tasks)
+    1. ETL is being performed on tables 1 & 3 because, the data is not architected properly
+        1. Ambiguity in Relocation preferences
+        2. Ambiguity in Availability - no available date or current availability status.
+        3. Complex logic for finding the correct job opportunity.
+    2. Recruiters table is going to stay the same because we still need recruiter’s information.
+
+
+Load table architecture - employee_new
+1. Employee name
+2. Company
+3. Current Location
+4. Primary Skill
+5. Availability Date
+6. IsAvailable
+7. Relocation Preference
+8. Recruiter’s Match Score (very important flag for easy and efficient service - calculated based on primary skill interest, location preference and availability (recruiter is looking and employee is also looking) match)
+9. List of recruiters that fall in this match score category (this makes it easier to apply for multiple roles)
+10. Email
+11. Phone
+
+After the migration, we’ll be left with two tables
+1. employee_new that provides rich and ready made info about employees and their job search needs.
+2. recruiters with all existing and incoming recruiters.

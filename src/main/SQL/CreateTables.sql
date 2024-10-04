@@ -1,0 +1,4 @@
+create table profilematch (ID SERIAL PRIMARY KEY, NAME VARCHAR, COMPANY VARCHAR, CURRENT_LOCATION VARCHAR, SKILL STRING[], AVAILABILITY_DATE DATE, ISAVAILABLE BOOL, RELOCATION_PREFERENCE STRING[], RECRUITER_MATCH_SCORE FLOAT, RECRUITERS_LIST JSONB, EMAIL VARCHAR, PHONE VARCHAR);
+create table skills (id serial primary key, name varchar, skills string[]);
+create table recruiters (id serial primary key, name varchar, company varchar, region varchar, sector varchar, technology varchar, requirement_type varchar, position_type varchar, email varchar, phone varchar);
+create table employees (ID SERIAL PRIMARY KEY, NAME VARCHAR, DESIGNATION VARCHAR, COMPANY VARCHAR, LOCATION VARCHAR, preferred_miles_for_relocation VARCHAR, AVAILABILITY VARCHAR, EMAIL VARCHAR, PHONE VARCHAR);
