@@ -23,8 +23,11 @@
          <li>
            Marketing via Demos and Advertisements
          </li>
-       </ul> <br/>
-       IT Sales Application - This product's concept and design lies in one simple idea - ```Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?```
+       </ul> 
+  </p>
+    <p>
+       <h4>Concept and Design</h4>
+          Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?
   </p>
     
   <span>
