@@ -10,7 +10,8 @@
     The product's concept and design lies in one simple idea - Instead of applying for so many jobs that the profile is not aligning with, why not know the match score before itself?
   </p>
   <span>
-    <span style="font-weight:bold"> PRODUCT FEATURE LOG </span>
+    <h3> PRODUCT FEATURE LOG </h3>
+    <br/>
     <ol>
       <li>
         Employees can register on the website
