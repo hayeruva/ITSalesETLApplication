@@ -1,6 +1,8 @@
-import DTO.Employee;
-import DTO.ProfileMatch;
-import DTO.Recruiter;
+package com.itsales.Contoller;
+
+import com.itsales.DTO.Employee;
+import com.itsales.DTO.ProfileMatch;
+import com.itsales.DTO.Recruiter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

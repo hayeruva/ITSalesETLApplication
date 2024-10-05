@@ -1,4 +1,4 @@
-package DTO;
+package com.itsales.DTO;
 
 import jakarta.persistence.*;
 import lombok.Getter;

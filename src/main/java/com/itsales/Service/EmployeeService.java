@@ -1,9 +1,7 @@
-package Service;
+package com.itsales.Service;
 
-import DAO.EmployeeRepository;
-import DTO.Employee;
-import org.hibernate.*;
-import org.hibernate.cfg.Configuration;
+import com.itsales.DAO.EmployeeRepository;
+import com.itsales.DTO.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

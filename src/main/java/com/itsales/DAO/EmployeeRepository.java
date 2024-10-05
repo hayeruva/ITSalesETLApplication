@@ -1,6 +1,6 @@
-package DAO;
+package com.itsales.DAO;
 
-import DTO.Employee;
+import com.itsales.DTO.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

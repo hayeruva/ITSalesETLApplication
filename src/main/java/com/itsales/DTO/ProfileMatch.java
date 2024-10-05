@@ -1,4 +1,4 @@
-package DTO;
+package com.itsales.DTO;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.Column;
