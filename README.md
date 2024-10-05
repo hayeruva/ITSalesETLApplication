@@ -1,7 +1,7 @@
 <html>
   <head>
     <h1>
-      IT Sales com.itsales.Application
+      IT Sales Application
     </h1>
     <br/>
   </head>
