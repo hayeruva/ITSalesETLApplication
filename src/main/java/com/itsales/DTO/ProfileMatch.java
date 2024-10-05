@@ -1,6 +1,5 @@
 package com.itsales.DTO;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,7 +10,7 @@ import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 @Entity
 @Table(name="profilematch")
@@ -65,8 +64,9 @@ public class ProfileMatch {
 
     @Getter
     @Setter
-    @Column(name="recruiters_list")
-    private List<RecruitersList> recruitersList;
+    @org.hibernate.annotations.JdbcTypeCode(org.hibernate.type.SqlTypes.JSON)
+    @Column(columnDefinition = "jsonb", name="recruiters_list")
+    private Map<String, Object> recruitersList;
 
     @Getter
     @Setter
@@ -78,15 +78,12 @@ public class ProfileMatch {
     @Column(name="phone")
     private String phone;
 
-    ObjectMapper mapper = new ObjectMapper();
-
     @Override
     public String toString(){
         return "id: "+this.getId()+", name: "+this.getName()+", company: "+this.getCompany()+", currentLocation: "+this.getCurrentLocation()+
                 "skills: "+this.getSkill().stream().collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)+", Availability Date: "+
                 this.getAvailabilityDate()+", isAvailable: "+this.getIsAvailable()+", relocation peference: "+this.getRelocationPreference().stream().collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)+
-                ", recruiter match score: "+this.getRecruiterMatchScore()+", recruiters list: "+this.getRecruitersList().stream().map(recruitersList -> {try{return mapper.writeValueAsString(recruitersList);}catch (Exception e){throw  new RuntimeException(e);}}).
-                collect(Collectors.joining(",", "[","]"));
+                ", recruiter match score: "+this.getRecruiterMatchScore()+", recruiters list: "+this.getRecruitersList().toString();
     }
 
 }
