@@ -1,8 +1,9 @@
 package DTO;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
@@ -11,14 +12,17 @@ public class Skill {
     @Id
     @Getter
     @Setter
+    @Column(name="id")
     private int id;
 
     @Getter
     @Setter
+    @Column(name="name")
     private String name;
 
     @Getter
     @Setter
+    @Column(name="skills")
     private List<String> skills;
 
     @Override

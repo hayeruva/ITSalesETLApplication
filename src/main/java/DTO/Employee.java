@@ -1,46 +1,61 @@
 package DTO;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
+
+@Entity
+@Table(name="employees")
 public class Employee {
 
     @Id
     @Getter
     @Setter
+    @Column(name="id")
     private int id;
 
     @Getter
     @Setter
+    @Column(name="name")
     private String name;
 
     @Getter
     @Setter
+    @Column(name="designation")
     private String designation;
 
     @Getter
     @Setter
+    @Column(name="company")
     private String company;
 
     @Getter
     @Setter
+    @Column(name="location")
     private String location;
 
     @Getter
     @Setter
+    @Column(name="preferred_miles_for_relocation")
     private String preferred_miles_for_relocation;
 
     @Getter
     @Setter
+    @Column(name="availability")
     private String availability;
 
     @Getter
     @Setter
+    @Column(name="email")
     private String email;
 
     @Getter
     @Setter
+    @Column(name="phone")
     private String phone;
 
     //If this is not implemented whenever the toString() method is called

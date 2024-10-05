@@ -1,47 +1,56 @@
 package DTO;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.web.service.annotation.GetExchange;
 
 public class Recruiter {
 
     @Id
     @Getter
     @Setter
+    @Column(name="id")
     private int id;
 
     @Getter
     @Setter
+    @Column(name="name")
     private String name;
 
     @Getter
     @Setter
+    @Column(name="company")
     private String company;
 
     @Getter
     @Setter
+    @Column(name="sector")
     private String sector;
 
     @Getter
     @Setter
+    @Column(name="technology")
     private String technology;
 
     @Getter
     @Setter
+    @Column(name="requirement_type")
     private String requirementType;
 
     @Getter
     @Setter
+    @Column(name="position_type")
     private String positionType;
 
     @Getter
     @Setter
+    @Column(name="email")
     private String email;
 
     @Getter
     @Setter
+    @Column(name="phone")
     private String phone;
 
     @Override

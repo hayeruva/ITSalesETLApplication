@@ -1,8 +1,11 @@
 package DTO;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+
 
 import java.util.Date;
 import java.util.List;
@@ -13,50 +16,62 @@ public class ProfileMatch {
     @Id
     @Getter
     @Setter
+    @Column(name="id")
     private int id;
 
     @Getter
     @Setter
+    @Column(name="name")
     private String name;
 
     @Getter
     @Setter
+    @Column(name="company")
     private String company;
 
     @Getter
     @Setter
+    @Column(name="current_location")
     private String currentLocation;
 
     @Getter
     @Setter
+    @Column(name="skill")
     private List<String> skill;
 
     @Getter
     @Setter
+    @Column(name="availability_date")
     private Date availabilityDate;
 
     @Getter
     @Setter
+    @Column(name="isavailable")
     private Boolean isAvailable;
 
     @Getter
     @Setter
+    @Column(name="relocation_preference")
     private List<String> relocationPreference;
 
     @Getter
     @Setter
+    @Column(name="recruiter_match_score")
     private double recruiterMatchScore;
 
     @Getter
     @Setter
+    @Column(name="recruiters_list")
     private List<RecruitersList> recruitersList;
 
     @Getter
     @Setter
+    @Column(name="email")
     private String email;
 
     @Getter
     @Setter
+    @Column(name="phone")
     private String phone;
 
     ObjectMapper mapper = new ObjectMapper();
