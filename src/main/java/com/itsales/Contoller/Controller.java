@@ -5,6 +5,10 @@ import com.itsales.DTO.ProfileMatch;
 import com.itsales.DTO.Recruiter;
 import com.itsales.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,8 +31,10 @@ public class Controller {
     }
 
     @GetMapping("/findAllEmployees")
-    public ResponseEntity findAllEmployees(){
-        return ResponseEntity.ok(Employee.class);
+    public ResponseEntity findAllEmployees(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size){
+        Pageable pageable = PageRequest.of(page, size, Sort.by("name").ascending());
+        Page<Employee> employees = employeeService.findAll(pageable);
+        return ResponseEntity.ok(employees);
     }
 
     @PostMapping("/saveEmployee")
