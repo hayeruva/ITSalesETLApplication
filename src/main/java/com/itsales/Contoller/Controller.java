@@ -48,7 +48,7 @@ public class Controller {
 
     @PostMapping("/saveEmployees")
     public ResponseEntity saveEmployees(@RequestBody(required = true) List<Employee> employees){
-        return ResponseEntity.ok(Employee.class);
+        return ResponseEntity.ok(employeeService.saveAll(employees));
     }
 
     @GetMapping("/findRecruiter")

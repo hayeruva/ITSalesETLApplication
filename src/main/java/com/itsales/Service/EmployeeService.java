@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmployeeService {
     @Autowired
@@ -22,6 +24,10 @@ public class EmployeeService {
 
     public Employee findByNameAndEmail(String name, String email){
         return employeeRepository.findByNameAndEmail(name, email);
+    }
+
+    public List<Employee> saveAll(List<Employee> employees){
+        return employeeRepository.saveAllAndFlush(employees);
     }
 
 
