@@ -1,0 +1,26 @@
+Hibernate dialects (JPA repository tags like entity, table, repository automatically retrieves details from application.properties)
+
+JSON type JDBC annotations (JPA annotations can be placed only on hibernate approved JDBC types)
+
+Parent tag issue in POM (spring-boot-starter-parent is moved out of dependencies to parent tags) - otherwise build success but throwing lifecycle exception
+
+Spring boot dependency issue in POM (added spring dependencies instead)
+
+@SpringBootApplication - needed spring-boot-autoconfigure dependency
+
+Google credentials in ~/.zshrc file - issuing old service account for connecting to cloud sql
+
+Cloud - doesn’t accept requests from IP’s assigned by org
+In one word, large enterprises don’t create cloud accounts. They have their own data centers, which bring in a range of IPs upon which the Cloud SaaS providers offer their services.
+Some orgs follow hybrid cloud which means, the data centers belong to both org and SaaS provider (eg: Walmart's own data centers and Google cloud's data center).
+
+Jakarta persistence api - version 3.2 conflicts with hibernate core's Entity manager factory. Switch to Jakarta persistence version 3.1. This is needed
+for enabling Jpa Repository annotations like @Repository, @Table, @Entity etc.
+
+In application.properties the JDBC URL has to be in format - jdbc:mysql://localhost:3306/<database_name>
+Otherwise runtime exception will occur - No database selected
+
+Sometimes ssh-agent is not running in the background so GIT connection appears to be lost. So we can check the list of running ssh-agents with this command: ssh-add -l
+If not present, then add our GIT ssh private key to the list: ssh-add ~/Documents/yes and test the connection with ssh git@github.com
+
+Overriding primary key and all lower case fields in JSON request payload
