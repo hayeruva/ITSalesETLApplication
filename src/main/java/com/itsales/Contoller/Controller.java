@@ -31,7 +31,7 @@ public class Controller {
 
     @GetMapping("/findEmployee")
     public ResponseEntity findEmployee(@RequestParam(required = true) String name, @RequestParam(required = true) String email){
-        return ResponseEntity.ok(Employee.class);
+        return ResponseEntity.ok(employeeService.findByNameAndEmail(name, email));
     }
 
     @GetMapping("/findAllEmployees")
@@ -53,7 +53,7 @@ public class Controller {
 
     @GetMapping("/findRecruiter")
     public ResponseEntity findRecruiter(@RequestParam(required = true) String name, @RequestParam(required = true) String email){
-        return ResponseEntity.ok(Recruiter.class);
+        return ResponseEntity.ok(recruiterService.findByNameAndEmail(name, email));
     }
 
     @GetMapping("/findAllRecruiters")

@@ -20,5 +20,9 @@ public class EmployeeService {
         return employeeRepository.findAll(pageable);
     }
 
+    public Employee findByNameAndEmail(String name, String email){
+        return employeeRepository.findByNameAndEmail(name, email);
+    }
+
 
 }

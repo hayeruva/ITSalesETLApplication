@@ -20,4 +20,8 @@ public class RecruiterService {
     public Recruiter save(Recruiter recruiter){
         return recruiterRepository.save(recruiter);
     }
+
+    public Recruiter findByNameAndEmail(String name, String email){
+        return recruiterRepository.findByNameAndEmail(name, email);
+    }
 }
