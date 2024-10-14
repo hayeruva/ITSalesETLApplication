@@ -3,6 +3,8 @@ package com.itsales.Contoller;
 import com.itsales.DTO.Employee;
 import com.itsales.DTO.ProfileMatch;
 import com.itsales.DTO.Recruiter;
+import com.itsales.Service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,9 @@ import java.util.List;
 
 @RestController
 public class Controller {
+
+    @Autowired
+    EmployeeService employeeService;
 
     @GetMapping("/findMatch")
     public ResponseEntity findMatchingOpportunities(@RequestParam(required = true) List<String> skills, @RequestParam(required = true) List<String> locationPreferences, @RequestParam(required = true) List<String> positionType){
@@ -28,7 +33,7 @@ public class Controller {
 
     @PostMapping("/saveEmployee")
     public ResponseEntity saveEmployee(@RequestBody(required = true) Employee employee){
-        return ResponseEntity.ok(Employee.class);
+        return ResponseEntity.ok(employeeService.saveEmployee(employee));
     }
 
     @PostMapping("/saveEmployees")
