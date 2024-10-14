@@ -2,12 +2,15 @@ package com.itsales.Service;
 
 import com.itsales.DAO.EmployeeRepository;
 import com.itsales.DTO.Employee;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
 public class EmployeeService {
@@ -26,8 +29,10 @@ public class EmployeeService {
         return employeeRepository.findByNameAndEmail(name, email);
     }
 
+    @Transactional
     public List<Employee> saveAll(List<Employee> employees){
-        return employeeRepository.saveAllAndFlush(employees);
+        CopyOnWriteArrayList<Employee> copiedEmployeeList = new CopyOnWriteArrayList<>(employees);
+        return employeeRepository.saveAllAndFlush(copiedEmployeeList);
     }
 
 
