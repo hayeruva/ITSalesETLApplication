@@ -112,6 +112,27 @@
             <version>2.12.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.azure.spring/spring-cloud-azure-starter -->
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>spring-cloud-azure-starter</artifactId>
+            <version>5.18.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>spring-cloud-azure-starter-keyvault</artifactId>
+            <version>5.18.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.azure.spring/spring-cloud-azure-starter-jdbc-mysql -->
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>spring-cloud-azure-starter-jdbc-mysql</artifactId>
+            <version>5.18.0</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/com.azure/azure-security-keyvault-secrets -->
         <dependency>
             <groupId>com.azure</groupId>
